@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatırım Planlarım</title>
+    <link rel="stylesheet" href="styles12.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EN YATIRIM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="biz-kimiz.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="plans-section">
+        <div class="plans-container">
+            <h1>Yatırım Planlarım</h1>
+            <div class="plan" id="plan1">
+                <div class="plan-header">
+                    <h2>Plan Adı: Yatırım Planı 1</h2>
+                    <p>Başlangıç: 01.01.2025</p>
+                    <p>Vade: 12 Ay</p>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar1" style="width: 25%"></div>
+                </div>
+                <button class="cta-btn" onclick="openModal(1)">Planı Görüntüle</button>
+            </div>
+
+            <div class="plan" id="plan2">
+                <div class="plan-header">
+                    <h2>Plan Adı: Yatırım Planı 2</h2>
+                    <p>Başlangıç: 01.02.2025</p>
+                    <p>Vade: 24 Ay</p>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar2" style="width: 50%"></div>
+                </div>
+                <button class="cta-btn" onclick="openModal(2)">Planı Görüntüle</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Yatırım Planı Detayları</h2>
+            <p id="plan-name"></p>
+            <p id="plan-assets"></p>
+            <div class="modal-btn-container">
+                <button class="cta-btn" onclick="completePlan()">Tamamla</button>
+                <button class="cta-btn" onclick="closeModal()">Kapat</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 En Yatırım | Tüm Hakları Saklıdır
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

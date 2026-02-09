@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EN YATIRIM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="biz-kimiz.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+            <div class="login-container">
+                <button class="login-btn" onclick="window.location.href='login.html'">Giriş Yap</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h1>Bizimle İletişime Geçin</h1>
+        <p>Herhangi bir sorunuz varsa, lütfen aşağıdaki formu doldurun. En kısa sürede size geri dönüş yapacağız.</p>
+        
+        <form method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="name">Ad Soyad:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="cta-btn">Gönder</button>
+        </form>
+    </section>
+
+    <footer>
+        © 2025 En Yatırım | Tüm Hakları Saklıdır
+    </footer>
+</body>
+</html>

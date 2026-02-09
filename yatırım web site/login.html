@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">EN YATIRIM</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+                <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="login-section">
+        <div class="login-container">
+            <h1>Giriş Yap</h1>
+            <form action="dashboard.html" method="POST" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="cta-btn">Giriş Yap</button>
+                <button type="submit" class="cta-btn">Kayıt Ol</button>
+            </form>
+            <p id="error-message" style="color: red; display: none;">Kullanıcı adı veya şifre yanlış!</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 En Yatırım | Tüm Hakları Saklıdır
+    </footer>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === "ygt" && password === "123") {
+                return true;
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
